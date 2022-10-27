@@ -1,0 +1,16 @@
+{
+  "name": "host",
+  "integrations": {
+    "capacitor": {},
+    "enterprise": {
+      "keyId": 9932,
+      "productKey": "key_4e62160043924354945ebd8cf9c26158",
+      "appId": "863be7a9",
+      "orgId": "6b952ff1-3144-4dac-a6dd-b6ef5b2db236",
+      "registries": [
+        "@ionic-enterprise;https://registry.ionicframework.com/"
+      ]
+    }
+  },
+  "type": "angular"
+}

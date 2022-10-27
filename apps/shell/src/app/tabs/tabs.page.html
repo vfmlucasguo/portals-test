@@ -1,0 +1,16 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="shop">
+      <ion-icon name="grid-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="cart">
+      <ion-badge color="warning" *ngIf="basketCount > 0">{{basketCount}}</ion-badge>
+      <ion-icon name="basket-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="user">
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

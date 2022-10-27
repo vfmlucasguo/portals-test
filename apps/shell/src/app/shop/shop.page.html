@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Shop</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Shop</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <h2 class="ion-padding">Must Haves, Bestsellers & More</h2>
+  <portals-ecommerce-featured-products [products]="featuredProducts"></portals-ecommerce-featured-products>
+  
+  <h2 class="ion-padding">Products</h2>
+  <div class="product-list ion-padding">
+    <portals-ecommerce-product-card 
+      *ngFor="let product of products" 
+      [product]="product"
+    ></portals-ecommerce-product-card>
+  </div>
+</ion-content>

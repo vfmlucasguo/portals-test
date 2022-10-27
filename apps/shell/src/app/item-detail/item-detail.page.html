@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/shop"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{product?.title}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/shop/help">
+        <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="product; else productNotFound">
+    <img src="../../assets/images/{{product.image}}" />
+    <div class="ion-padding">
+      <h1>{{product.title}}</h1>
+      <h2>{{product.price | currency}}</h2>
+      <p>{{product.description}}</p>
+      <ion-button expand="block" (click)="addToCart(product)">
+        Add to cart
+      </ion-button>
+    </div>
+  </div>
+  <ng-template #productNotFound>
+    <div class="center-container">
+      <h1>Product Not Found</h1>
+    </div>
+  </ng-template>
+</ion-content>
